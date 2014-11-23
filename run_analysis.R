@@ -43,6 +43,6 @@ for(i in 1:nrow(activity_labels)){
 
 tidy = aggregate(train_and_test[,1:79],by=list(subject=train_and_test$subject,activity=train_and_test$activity),mean)
 
-write.table(tidy,"tidy.txt",sep="\t")
+write.table(tidy,"tidy.txt",sep="\t",row.name=FALSE)
 
 
